@@ -30,7 +30,7 @@ export default function ImageSlider() {
                 SliderData.map((img, idx) => {
                     return (
                         <div className={idx === current ? 'slide active' : 'slide'} key={idx}>
-                            {idx === current && <img src={img.image} alt="Image" className="image" />}
+                            {idx === current && <img src={process.env.PUBLIC_URL + img.image} alt="Image" className="image" />}
                         </div>
                     )
                 })
